@@ -1,4 +1,6 @@
 # AwesomeErrors
+[![CI Suite](https://github.com/rodloboz/awesome_errors/actions/workflows/ci.yaml/badge.svg)](https://github.com/rodloboz/awesome_errors/actions/workflows/ci.yaml)
+[![Gem Version](https://badge.fury.io/rb/awesome_errors.svg)](https://rubygems.org/gems/awesome_errors)
 
 Easily add errors to your service objects and classes. `AwesomeErrors` is inspired by the `ActiveModel::Errors` API, but ensures that each error contains an error `code` attribute and is not concerned with translating error messages.
 
