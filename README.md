@@ -89,7 +89,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/awesome_errors.
+Bug reports and pull requests are welcome on GitHub at https://github.com/rodloboz/awesome_errors.
 
 ## License
 
