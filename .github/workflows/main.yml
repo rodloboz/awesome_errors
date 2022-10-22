@@ -1,0 +1,41 @@
+name: Ruby
+
+on:
+  push:
+    branches: [master]
+
+  pull_request:
+    branches: ['**']
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    name: Ruby ${{ matrix.ruby }}
+    strategy:
+      matrix:
+        ruby:
+          - '2.7.2'
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Set up Ruby
+      uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: ${{ matrix.ruby }}
+        bundler-cache: true
+
+    - name: Run rubocop
+      run:
+        bundle exec rubocop --parallel --format json --out /tmp/rubocop.json
+
+    - name: Report rubocop violations
+      if: failure()
+      uses: duderman/rubocop-annotate-action@v0.1.0
+      with:
+        path: /tmp/rubocop.json
+
+    - name: Run rspec tests
+      run:
+        bundle exec rspec --format RSpec::Github::Formatter

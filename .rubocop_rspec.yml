@@ -1,0 +1,15 @@
+require:
+  - rubocop-rspec
+
+RSpec/MultipleExpectations:
+  Enabled: false
+
+RSpec/ExampleLength:
+  Enabled: false
+
+RSpec/Dialect:
+  PreferredMethods:
+    setup: before
+
+RSpec/NestedGroups:
+  Max: 6
