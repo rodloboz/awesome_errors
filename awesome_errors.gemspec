@@ -6,7 +6,7 @@ Gem::Specification.new do |spec|
   spec.name = "awesome_errors"
   spec.version = AwesomeErrors::VERSION
   spec.authors = ["Rui Freitas"]
-  spec.email = ["rui.ferreira.freitas@gmail.com"]
+  spec.email = ["dinnerpartysaboteur@gmail.com"]
 
   spec.summary = "Easily add errors to your service objects and Ruby classes."
   spec.description = "AwesomeErrors is a simply way to add errors to your Ruby objects and classes."
